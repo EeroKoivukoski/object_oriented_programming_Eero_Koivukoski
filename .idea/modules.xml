@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.1/Tasks 1.1.iml" filepath="$PROJECT_DIR$/Tasks 1.1/Tasks 1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.2/Tasks 1.2.iml" filepath="$PROJECT_DIR$/Tasks 1.2/Tasks 1.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/object_oriented_programming.iml" filepath="$PROJECT_DIR$/object_oriented_programming.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasks 1.1/untitled.iml" filepath="$PROJECT_DIR$/Tasks 1.1/untitled.iml" />
     </modules>
   </component>
 </project>
