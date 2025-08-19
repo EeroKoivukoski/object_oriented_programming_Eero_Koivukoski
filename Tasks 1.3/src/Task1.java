@@ -18,14 +18,14 @@ public class Task1 {
 
         System.out.print("Give coefficient a: ");
         int a = Integer.parseInt(scanner.nextLine());
-        System.out.println("█  "+ a + "x^2 + bx + c = 0                                    █");
+        System.out.println(a + "x^2 + bx + c = 0");
         System.out.print("Give coefficient b: ");
         int b = Integer.parseInt(scanner.nextLine());
-        System.out.println("█"+a + "x^2 + " + b + "x + c = 0                                     █");
+        System.out.println(a+ "x^2 + " + b + "x + c = 0");
         System.out.print("Give coefficient c: ");
         int c = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("█" + a + "x^2 + " + b + "x + " + c + " = 0                                    █");
+        System.out.println(a + "x^2 + " + b + "x + " + c + " = 0");
 
         int discriminant = b * b - 4 * a * c;
 
@@ -39,9 +39,9 @@ public class Task1 {
             System.out.println("One real root: " + root);
         } else {
             double realPart = -b / (2.0 * a);
-            double imaginaryPart = Math.sqrt(-discriminant) / (2.0 * a);
+            double imag= Math.sqrt(-discriminant) / (2.0 * a);
             System.out.printf("Zero real roots: %.2f + %.2fi and %.2f - %.2fi\n",
-                    realPart, imaginaryPart, realPart, imaginaryPart);
+                    realPart, imag, realPart, imag);
         }
         System.out.print("██████████████████████████████████████████████████████████");
         scanner.close();
