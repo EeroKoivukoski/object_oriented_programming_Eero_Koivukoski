@@ -3,11 +3,9 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        String x;
         Scanner input = new Scanner(System.in);
-
         System.out.println("Generate name? Y/N");
-        x=input.nextLine().toLowerCase(Locale.getDefault());
+        String x=input.nextLine().toLowerCase(Locale.getDefault());
 
         if (x.equals("n")) System.exit(1);
 
