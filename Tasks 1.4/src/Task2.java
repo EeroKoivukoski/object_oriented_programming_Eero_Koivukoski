@@ -10,29 +10,19 @@ public class Task2 {
             System.out.print("Please enter number " + i + ": ");
             numbers[i-1] = input.nextInt();
         }
-        int hsum = 0;
-        int sum = 0;
-        int start = 0;
-        int end = 0;
+        int hsum=0,end=0,start = 0,sum;
+        boolean initial = true;
         for (int j = 1; j <= num; j++) {
+            sum = 0;
             for (int i = j; i <= num; i++) {
                 sum += numbers[i-1];
-                if (sum >= hsum) {
+                if (sum >= hsum || initial) {
+                    initial = false;
                     hsum = sum;
                     start = j;
                     end = i;
                 }
             }
-            sum = 0;
-            for (int i = j; i >= 1; i--) {
-                sum += numbers[i-1];
-                if (sum >= hsum) {
-                    hsum = sum;
-                    start = i;
-                    end = j;
-                }
-            }
-            sum = 0;
         }
         System.out.println("Largest sum possible is: "+ hsum + "\nIntegers: "+ start+"-"+end+".");
     }
