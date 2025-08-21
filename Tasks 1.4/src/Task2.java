@@ -13,6 +13,7 @@ public class Task2 {
             numbers[i-1] = input.nextInt();
         }
 
+
         //Create variable to save the highest sum and the end and start numbers of the max sum
         int hsum=0,sum;
         String start_end = " ";
