@@ -1,9 +1,11 @@
+import java.util.Scanner;
+
 class CoffeeMaker {
     //variables for mimicing a coffee machine
     boolean power = false; String coffeeType = "normal"; int coffeeAmount = 0;
 
     //method to check power of th coffee maker
-    public String isOn(){
+    String isOn(){
         if(power){
             return "on";
         }
@@ -13,16 +15,16 @@ class CoffeeMaker {
     }
 
     //method to check what mode it's in
-    public String whatCoffeeType(){ return coffeeType; }
+    String whatCoffeeType(){ return coffeeType; }
 
     //method to check the coffee amount
-    public int whatAmount(){ return coffeeAmount; }
+    int whatAmount(){ return coffeeAmount; }
 
     //method to switch the power
-    public void onOff(){ power=!power; }
+    void onOff(){ power=!power; }
 
     //method to switch the mode
-    public void switchMode(){
+    void switchMode(){
         if (power){
             if (coffeeType.equals("normal")){
                 coffeeType="espresso";
@@ -33,7 +35,7 @@ class CoffeeMaker {
         }
     }
 
-    public void switchAmount(int amount){
+    void switchAmount(int amount){
         if (power) {
             coffeeAmount = coffeeAmount + amount;
             if (coffeeAmount > 80) {
@@ -58,8 +60,11 @@ class CoffeeMakerDriver {
         mycoffeeMaker.switchMode();
         System.out.println("Coffee type is "+mycoffeeMaker.whatCoffeeType()+".");
 
+        Scanner sc = new Scanner(System.in);
         //Call the switchAmount method to change the coffee amount(it is limited to 10-80ml).
-        mycoffeeMaker.switchAmount(50);
+        System.out.println("How much coffee do you want(10-80ml)?");
+        int wantedamount=Integer.parseInt(sc.nextLine());
+        mycoffeeMaker.switchAmount(wantedamount);
         System.out.println("Coffee amount is "+mycoffeeMaker.whatAmount()+"ml.");
 
         mycoffeeMaker.onOff();

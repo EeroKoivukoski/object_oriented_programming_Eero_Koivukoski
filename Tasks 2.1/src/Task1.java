@@ -4,14 +4,14 @@ class Television {
     int channel;
 
     //simple methods to check status of the television
-    public boolean isOn() { return power; }
-    public int getChannel() { return channel; }
+    boolean isOn() { return power; }
+    int getChannel() { return channel; }
 
     //method to switch the power variable of the television
-    public void pressOnOff() { power = !power; }
+    void pressOnOff() { power = !power; }
 
     //method to switch the channel variable
-    public void setChannel(int setchannel) {
+    void setChannel(int setchannel) {
         channel = setchannel;
         while (channel >10){
             channel = channel - 10;
