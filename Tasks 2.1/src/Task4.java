@@ -1,6 +1,7 @@
 class Car2 {
     private double speed;
     private double gasolineLevel;
+    private double gasolineCapacity;
     private double speedGoal;
     private String typeName;
 
@@ -11,6 +12,7 @@ class Car2 {
 
     public Car2(double gasolineCapacity,double speed) {
         this.speed = speed;
+        this.gasolineCapacity = gasolineCapacity;
     }
 
     public void accelerate(int speedchange) {
@@ -19,7 +21,13 @@ class Car2 {
             gasolineLevel -= 10;
         }
         else{
-            speed -= 10;
+            if(gasolineLevel > 0){
+                speed -= 10;
+            }
+            else{
+                speed = 0;
+                System.out.println("Speed is not reachable!");
+            }
         }
     }
 
