@@ -1,26 +1,38 @@
 import java.util.ArrayList;
 
 //Class to create grocer objects
-class Grocer{
+class Grocer2 {
     public String itemName;
     public double itemPrice;
-    public Grocer(String itemName, double itemPrice){
+    public Grocer2(String itemName, double itemPrice){
         this.itemName = itemName;
         this.itemPrice = itemPrice;
     }
 }
 //The Grocery list manager
 class GroceryListManager2 {
-    public final ArrayList<Grocer> groceryList = new ArrayList<>();
+    public final ArrayList<Grocer2> groceryList = new ArrayList<>();
     void addItem(String item,Double cost) {
         System.out.println("Adding " + item + " to the list...");
-        groceryList.add(new Grocer(item,cost));
+        boolean check = false;
+        for (Grocer2 grocer : groceryList) {
+            if (grocer.itemName.equals(item)) {
+                check = true;
+                break;
+            }
+        }
+        if (!check) {
+            groceryList.add(new Grocer2(item, cost));
+        }
+        else {
+            System.out.println("Item " + item + " already exists");
+        }
     }
     void removeItem(String item) {
         boolean found = false;
-        Grocer foundGrocer = null;
+        Grocer2 foundGrocer = null;
         System.out.println("Removing " + item + " from the list...");
-        for(Grocer grocer : groceryList){
+        for(Grocer2 grocer : groceryList){
             if(grocer.itemName.equals(item)){
                 foundGrocer = grocer;
                 found = true;
@@ -38,13 +50,13 @@ class GroceryListManager2 {
     void displayList(){
         int itemCount = 1;
         System.out.println("Grocery List:");
-        for(Grocer item : groceryList){
+        for(Grocer2 item : groceryList){
             System.out.println(itemCount++ + ". " + item.itemName + ", costing: " + item.itemPrice);
         }
     }
     void checkItem(String item){
         boolean found = false;
-        for(Grocer grocer : groceryList){
+        for(Grocer2 grocer : groceryList){
             if(grocer.itemName.equals(item)){
                 System.out.println(item + " is in the list!");
                 found = true;
@@ -55,7 +67,7 @@ class GroceryListManager2 {
     }
     double totalPrice(){
         double totalPrice = 0;
-        for(Grocer grocer : groceryList){
+        for(Grocer2 grocer : groceryList){
             totalPrice += grocer.itemPrice;
         }
         return totalPrice;
@@ -69,6 +81,7 @@ class GroceryListTester2  {
         myGroceryListManager2.addItem("Tomato ketchup",3.52);
         myGroceryListManager2.addItem("Pepsi cola", 6.99);
         myGroceryListManager2.addItem("Halloumi cheese",123.72);
+        myGroceryListManager2.addItem("Chicken nugget",1.0);
         myGroceryListManager2.addItem("Chicken nugget",1.0);
         myGroceryListManager2.displayList();
         myGroceryListManager2.removeItem("Tomato ketchup");

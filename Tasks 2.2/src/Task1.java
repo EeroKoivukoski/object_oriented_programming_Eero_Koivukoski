@@ -3,9 +3,21 @@ import java.util.ArrayList;
 class GroceryListManager {
     private final ArrayList<String> groceryList = new ArrayList<>();
 
-    void addItem(String item){
+    void addItem(String item) {
         System.out.println("Adding " + item + " to the list...");
-        groceryList.add(item);
+        boolean check = false;
+        for (String grocer : groceryList) {
+            if (grocer.equals(item)) {
+                check = true;
+                break;
+            }
+        }
+        if (!check) {
+            groceryList.add(item);
+        }
+        else {
+            System.out.println("Item " + item + " already exists");
+        }
     }
     void removeItem(String item){
         System.out.println("Removing " + item + " from the list...");
@@ -35,6 +47,7 @@ class GroceryListTester  {
         myGroceryListManager.addItem("Tomato ketchup");
         myGroceryListManager.addItem("Pepsi cola");
         myGroceryListManager.addItem("Halloumi cheese");
+        myGroceryListManager.addItem("Chicken nugget");
         myGroceryListManager.addItem("Chicken nugget");
         myGroceryListManager.displayList();
         myGroceryListManager.removeItem("Tomato ketchup");
