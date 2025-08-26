@@ -19,10 +19,10 @@ class Book3 {
 }
 
 class Library3 {
-    private final ArrayList<Book4> books = new ArrayList<>();
-    private final ArrayList<Book4> borrowedBooks = new ArrayList<>();
+    private final ArrayList<Book5> books = new ArrayList<>();
+    private final ArrayList<Book5> borrowedBooks = new ArrayList<>();
 
-    void addBooks(Book4 book) {
+    void addBooks(Book5 book) {
         books.add(book);
     }
 
@@ -30,7 +30,7 @@ class Library3 {
         int count=1;
         boolean check=false;
         System.out.println("Books in the library:");
-        for (Book4 book : books) {
+        for (Book5 book : books) {
             System.out.println(count++ + ". Title:" + '"' + book.getTitle() + '"' + ", Author:" + '"' + book.getAuthor() + '"' + " Publication Year:" + '"' + book.getPublicationYear() + '"');
             check=true;
         }
@@ -44,7 +44,7 @@ class Library3 {
         int count=1;
         boolean check=false;
         System.out.println("Books by the author " + '"' + author + '"' + " :");
-        for (Book4 book : books) {
+        for (Book5 book : books) {
             if (book.getAuthor().equals(author)) {
                 System.out.println(count++ + ". Title:" + '"' + book.getTitle() + '"' + ", Author:" + '"' + book.getAuthor() + '"' + " Publication Year:" + '"' + book.getPublicationYear() + '"');
                 check=true;
@@ -56,9 +56,9 @@ class Library3 {
         System.out.println();
     }
 
-    Book4 borrowBook(String title) {
-        Book4 wantedBook;
-        for (Book4 book : books) {
+    Book5 borrowBook(String title) {
+        Book5 wantedBook;
+        for (Book5 book : books) {
             if (book.getTitle().equals(title)) {
                 wantedBook = book;
                 books.remove(book);
@@ -68,7 +68,7 @@ class Library3 {
         }
         return null;
     }
-    void returnBook(Book4 book) {
+    void returnBook(Book5 book) {
         if  (borrowedBooks.contains(book)) {
             books.add(book);
             borrowedBooks.remove(book);
@@ -80,12 +80,12 @@ class Library3 {
     }
 
     Boolean isBookAvailable(String title) {
-        for (Book4 book : books) {
+        for (Book5 book : books) {
             if (book.getTitle().equals(title)) {
                 return true;
             }
         }
-        for  (Book4 book : borrowedBooks) {
+        for  (Book5 book : borrowedBooks) {
             if (book.getTitle().equals(title)) {
                 return false;
             }
@@ -96,14 +96,14 @@ class Library3 {
 
 class LibraryMain3 {
     public static void main(String[] args) {
-        Library4 library3 = new Library4();
-        Book4 borrowedbook;
+        Library5 library3 = new Library5();
+        Book5 borrowedbook;
         library3.displayBooks();
-        library3.addBooks(new Book4("Horus Rising", "Dan Abnett", "2006"));
-        library3.addBooks(new Book4("False Gods","Graham Mcneill","2006"));
-        library3.addBooks(new Book4("Galaxy in Flames","Ben courtner", "2006"));
-        library3.addBooks(new Book4("The Flight of the Einstein","James Swallow", "2007"));
-        library3.addBooks(new Book4("Fulgrim","Graham Mcneill","2007"));
+        library3.addBooks(new Book5("Horus Rising", "Dan Abnett", "2006"));
+        library3.addBooks(new Book5("False Gods","Graham Mcneill","2006"));
+        library3.addBooks(new Book5("Galaxy in Flames","Ben courtner", "2006"));
+        library3.addBooks(new Book5("The Flight of the Einstein","James Swallow", "2007"));
+        library3.addBooks(new Book5("Fulgrim","Graham Mcneill","2007"));
         library3.displayBooks();
         library3.findBooksByAuthor("Graham Mcneill");
         library3.findBooksByAuthor("God Emperor of Mankind");
