@@ -9,9 +9,7 @@ class CoffeeMaker {
         if(power){
             return "on";
         }
-        else{
-            return "off";
-        }
+        return "off";
     }
 
     //method to check what mode it's in
@@ -26,12 +24,15 @@ class CoffeeMaker {
     //method to switch the mode
     void switchMode(){
         if (power){
-            if (coffeeType.equals("normal")){
-                coffeeType="espresso";
+            switch(coffeeType){
+                case "normal":
+                    coffeeType="espresso";
+                    break;
+                case "espresso":
+                    coffeeType="normal";
+                    break;
             }
-            else {
-                coffeeType="normal";
-            }
+
         }
     }
 
