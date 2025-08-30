@@ -1,13 +1,28 @@
-abstract class  AbstractVehicle implements Vehicle, ElectricVehicle{
+interface Vehicle4 {
+    void start();
+    void stop();
+    void getInfo();
+    void calculateFuelEfficiency();
+}
+
+interface ElectricVehicle4 {
+    void start();
+    void stop();
+    void getInfo();
+    void charge();
+    void calculateFuelEfficiency();
+}
+
+abstract class AbstractVehicle4 implements Vehicle4, ElectricVehicle4 {
     String name;
     boolean isCharged;
-    AbstractVehicle(String name){
+    AbstractVehicle4(String name){
         this.name=name;
     }
     String getName(){ return name; }
     @Override
     public void charge() {
-        if (this.getClass().getSimpleName().equals("ElectricVehicle")) {
+        if (this.getClass().getSimpleName().equals("ElectricCar4")) {
             if (!isCharged) {
                 System.out.println("Charging...");
                 this.isCharged = true;
@@ -16,10 +31,34 @@ abstract class  AbstractVehicle implements Vehicle, ElectricVehicle{
             }
         }
     }
-
-
+    @Override
+    public void calculateFuelEfficiency() {
+        switch (this.getClass().getSimpleName()) {
+            case "ElectricCar4":
+                System.out.println("Fuel efficiency is 0.20 kWh per km");
+                System.out.println();
+                break;
+            case "ElectricMotrcycle4":
+                System.out.println("Fuel efficiency is 0.17 kWh per km");
+                System.out.println();
+                break;
+            case "Car4":
+                System.out.println("Fuel efficiency is 7 liters per km");
+                System.out.println();
+                break;
+            case "Motorcycle4":
+                System.out.println("Fuel efficiency is 5 liters per km");
+                System.out.println();
+                break;
+            case "Bus4":
+                System.out.println("Fuel efficiency is 25 liters per km");
+                System.out.println();
+                break;
+        }
+    }
 }
-class Car2 extends AbstractVehicle implements Vehicle {
+
+class Car4 extends AbstractVehicle4 implements Vehicle4 {
     @Override
     public void start() {
         System.out.println(this.getClass().getSimpleName()+" is starting...");
@@ -35,12 +74,11 @@ class Car2 extends AbstractVehicle implements Vehicle {
         System.out.println("Name: " + this.getName());
         System.out.println("Fuel: "+ this.fuelType);
         System.out.println("Color: "+this.color);
-        System.out.println();
     }
     private final String color;
     private final String fuelType;
 
-    Car2(String name, String fuelType,String color) {
+    Car4(String name, String fuelType, String color) {
         super(name);
         this.fuelType=fuelType;
         this.color = color;
@@ -50,8 +88,7 @@ class Car2 extends AbstractVehicle implements Vehicle {
     String getColor() { return color; }
 }
 
-//Bus subclass
-class Bus2 extends Car2 implements Vehicle {
+class Bus4 extends Car4 implements Vehicle4 {
     @Override
     public void getInfo() {
         System.out.println("Bus information:");
@@ -59,50 +96,22 @@ class Bus2 extends Car2 implements Vehicle {
         System.out.println("Name: " + this.getName());
         System.out.println("Fuel: "+ this.getFuelType());
         System.out.println("Capacity: "+this.seats);
-        System.out.println();
     }
 
     private final int seats;
-    Bus2(String name, String fuelType,String color,int seats) {
+    Bus4(String name, String fuelType, String color, int seats) {
         super(name, fuelType,color);
         this.seats = seats;
     }
 }
 
-//Motorcycle subclass
-class Motorcycle2 extends Car2{
-    Motorcycle2(String name,String fuelType, String color) {
+class Motorcycle4 extends Car4 {
+    Motorcycle4(String name, String fuelType, String color) {
         super(name,fuelType,color);
     }
 }
-//I know that this isn't exactly what was asked in the assingment but since bus and motorcycle are subclasses of car and car is a subclass of abstract, it feels pointless to make them subclasses of abstract vehicle.
 
-class VehicleDemo2 {
-    public static void main(String[] args) {
-        Vehicle Car = new Car2("Toyota","Petrol", "Red");
-        Vehicle Motorcycle = new Motorcycle2("Ducati","Gasoline", "Black");
-        Vehicle Bus = new Bus2("Volvo","Diesel","Blue",40);
-
-        Car.start();
-        Car.stop();
-        Car.getInfo();
-
-        Motorcycle.start();
-        Motorcycle.stop();
-        Motorcycle.getInfo();
-
-        Bus.start();
-        Bus.stop();
-        Bus.getInfo();
-    }
-}
-interface ElectricVehicle {
-    void start();
-    void stop();
-    void getInfo();
-    void charge();
-}
-class  ElectricCar extends AbstractVehicle implements ElectricVehicle {
+class ElectricCar4 extends AbstractVehicle4 implements ElectricVehicle4 {
     Boolean isCharged;
     @Override
     public void start() {
@@ -119,22 +128,11 @@ class  ElectricCar extends AbstractVehicle implements ElectricVehicle {
         System.out.println("Name: " + this.getName());
         System.out.println("Fuel: "+ this.fuelType);
         System.out.println("Color: "+this.color);
-        System.out.println();
-    }
-    @Override
-    public void charge() {
-        if (!isCharged) {
-            System.out.println("Charging...");
-            this.isCharged = true;
-        }
-        else  {
-            System.out.println("Already charged!");
-        }
     }
     private final String color;
     private final String fuelType;
 
-    ElectricCar(String name,String color) {
+    ElectricCar4(String name, String color) {
         super(name);
         this.fuelType="Electricity";
         this.color = color;
@@ -145,30 +143,49 @@ class  ElectricCar extends AbstractVehicle implements ElectricVehicle {
     String getColor() { return color; }
 }
 
+class ElectricMotorcycle4 extends ElectricCar4 implements ElectricVehicle4 {
 
-class ElectricMotorcycle extends ElectricCar implements ElectricVehicle {
-
-    ElectricMotorcycle(String name, String color) {
+    ElectricMotorcycle4(String name, String color) {
         super(name, color);
     }
 }
 
-class VehicleDemo3 {
+class VehicleDemo4{
     public static void main(String[] args) {
-        ElectricVehicle Car = new ElectricCar("Toyota","Red");
-        ElectricMotorcycle Motorcycle = new ElectricMotorcycle("Ducati","Black");
+        ElectricVehicle4 eCar = new ElectricCar4("Toyota","Red");
+        ElectricMotorcycle4 eMotorcycle = new ElectricMotorcycle4("Ducati","Black");
 
-        Car.charge();
-        Car.charge();
+        eCar.charge();
+        eCar.charge();
+        eCar.start();
+        eCar.stop();
+        eCar.getInfo();
+        eCar.calculateFuelEfficiency();
+
+        eMotorcycle.charge();
+        eMotorcycle.charge();
+        eMotorcycle.start();
+        eMotorcycle.stop();
+        eMotorcycle.getInfo();
+        eMotorcycle.calculateFuelEfficiency();
+
+        Vehicle4 Car = new Car4("Toyota","Petrol", "Red");
+        Vehicle4 Motorcycle = new Motorcycle4("Ducati","Gasoline", "Black");
+        Vehicle4 Bus = new Bus4("Volvo","Diesel","Blue",40);
+
         Car.start();
         Car.stop();
         Car.getInfo();
+        Car.calculateFuelEfficiency();
 
-        Motorcycle.charge();
-        Motorcycle.charge();
         Motorcycle.start();
         Motorcycle.stop();
         Motorcycle.getInfo();
+        Motorcycle.calculateFuelEfficiency();
 
+        Bus.start();
+        Bus.stop();
+        Bus.getInfo();
+        Bus.calculateFuelEfficiency();
     }
 }
