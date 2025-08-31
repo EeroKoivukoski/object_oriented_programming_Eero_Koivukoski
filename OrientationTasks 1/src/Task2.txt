@@ -1,0 +1,24 @@
+2.(W) Take a real-world operational system that can be observed (bank, supermarket) and identify the elements
+associated with it in terms of variability, complexity, interconnectedness.
+
+Matkustajien määrä voi vaihdella monista syistä. Esimerkiksi  työajat, konsertit, urheilutapahtumat, sää voi
+vaikuttaa tähän. Liikenne voi myös muuttua sään, onnetomuuksien, tietöiden tai vain ruuhkien takia eli aikataulut
+voivat vaihdella. Bussit tietenkin voivat myös mennä rikki, olkoon sitten moottorissa jotain pientä vikaa tai
+liikenneonnettomuus. Itse matkustajatkin voivat vaikuttaa bussiin, olkoon vain hidas liikkuja jolla voi
+kestää kaummin mennä taitulla pois bussista. On myös häiriköitä aina joskus jotka pitää poistaa busseista
+jatkaakseen matkaa esim.henkilö joka on ilman lippua, eikä suostu poistumaan tai maksamaan lippua ja sakkoa.
+Ja viimeisenä vielä voi olla käynissä lakko.
+
+Monimutkaisuuden näkökulmasta voi vaikuttaa Aikataulut ja reitit.
+On olemassa satoja eri reittejä ja paljon busseja jotka kaikki pitää lajitella nähin reitteihin ajajineen.
+Pitää pitää mielessä bussien eri ominaisuuksia oli se sitten istuinten määrä, polttoine tai minkä merkkinen se on.
+Samaan kategoriaan varmaan menisi julkisen liikenteen ylläpito.
+Lipunmyynti ja maksujärjestelmät ovat myös monimutkaisia. Miten jokainen lipunosto voidaan seurata ja mille
+reiteille voi kyseisellä lipulla mennä.
+
+Yhteyksiä aikaisemmista asioista on varmaan asiakkaiden määrä ja kuinka yleisesti bussien pitäisi kulkea.
+Bussien liikkuminen ja aikataulut. Koska voimme ennakoida aikatauluja arvioimalla liikkumista tämänhetkisen datan
+perusteella.
+Kuljettajat ja bussit koska jos ei ole tarpeeksi kuljettajia ei voida kaikkia busseja aina hyödyntää.
+Lippujen hinta ja kysyntä. Jos lippujen hinta on halvempi niin kysyntä nousee, mutta jos lippujen hinta on liian matala
+voimme menettää enemmän rahaa kuin budjetti antaa.

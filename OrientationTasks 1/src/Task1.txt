@@ -1,0 +1,12 @@
+1. (W) Think of everyday situations that simulation could analyze. What aspects of the situation make the simulation
+approach specifically appropriate for analyzing the situation (i.e., think about and explain why simulation would be
+specifically better than experimenting in the real world). What aspects of sustainability can you incorporate into
+the simulation (see, for example, chapter 1).
+
+Julkinen liikenne.
+Koska et voi helposti vaihtaa reittejä tai vaihtaa bussien ajoituksia ilman että pilaat monien ihmisten aikataulut.
+Simulaatio antaa sinun helposti testata kuinka hyvin asiat toimisivat ja millä tavoilla. Esimerkiksi millä alueilla
+juna toimisi paremmin tai millä alueella bussi toimisi paremmin.
+Myöskin voit laskelmoida miten reitin vaihtaminen voisi vaikuttaa bensan käyttöön tai ekonomiaan muutenkin.
+Loppujen lopuksi se kuitenkin säästäisi kaikkien aikaa rahaa ja antaa option testata asioita
+joita oikeassa elämässä ei olisi aikaa tai resursseja testata.
