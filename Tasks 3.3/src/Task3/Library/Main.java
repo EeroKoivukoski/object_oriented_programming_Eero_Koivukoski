@@ -19,5 +19,12 @@ public class Main {
         library.borrowBook(john, falseGods);
         library.returnBook(john, falseGods);
 
+        //Performing reserving,displaying and cancelling operations
+        library.reserveBook(john, falseGods);
+        library.displayReservedBooks(john);
+        library.removeReservation(john, falseGods);
+        library.displayReservedBooks(john);
+
+
     }
 }

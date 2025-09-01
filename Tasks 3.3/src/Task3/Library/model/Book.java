@@ -16,7 +16,7 @@ public class Book {
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
     public long getIsbn() { return isbn; }
-    public boolean getReserved() { return reserved; }
+    public boolean getReservedStatus() { return reserved; }
     public void changeReservedStatus() { this.reserved = !this.reserved; }
 
 }
