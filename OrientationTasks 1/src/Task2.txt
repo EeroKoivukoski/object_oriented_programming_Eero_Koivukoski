@@ -1,6 +1,3 @@
-2.(W) Take a real-world operational system that can be observed (bank, supermarket) and identify the elements
-associated with it in terms of variability, complexity, interconnectedness.
-
 Matkustajien määrä voi vaihdella monista syistä. Esimerkiksi  työajat, konsertit, urheilutapahtumat, sää voi
 vaikuttaa tähän. Liikenne voi myös muuttua sään, onnetomuuksien, tietöiden tai vain ruuhkien takia eli aikataulut
 voivat vaihdella. Bussit tietenkin voivat myös mennä rikki, olkoon sitten moottorissa jotain pientä vikaa tai
