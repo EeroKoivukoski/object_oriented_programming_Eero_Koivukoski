@@ -25,8 +25,8 @@ public class TestMainTask6 {
             }
         }
         System.out.println("-----------------------------------------------");
-        ServicePoint2 servicePoint = new ServicePoint2();
-        CustomerGenerator2 generator = new CustomerGenerator2();
+        ServicePoint servicePoint = new ServicePoint();
+        CustomerGenerator generator = new CustomerGenerator();
         for (int loop = 1; loop < loops+1; loop++) {
             generator.generateCustomers(5, servicePoint);
             servicePoint.serve(loop);

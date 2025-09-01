@@ -6,6 +6,7 @@ public class Customer {
     private long serviceEndTime;
 
 
+
     public Customer() {
         this.id = nextId++ ;
         this.queueStartTime = System.currentTimeMillis();

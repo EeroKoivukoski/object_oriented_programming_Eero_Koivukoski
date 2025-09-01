@@ -5,11 +5,11 @@ public class Customer {
     private long serviceStartTime;
     private long serviceEndTime;
 
-
     public Customer() {
         this.id = nextId++ ;
         this.queueStartTime = System.currentTimeMillis();
     }
+
 
     //Methods to get values out of object
     public long getQueueStartTime(){ return queueStartTime; }

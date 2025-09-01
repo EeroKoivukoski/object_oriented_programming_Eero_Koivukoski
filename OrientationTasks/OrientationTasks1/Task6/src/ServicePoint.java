@@ -1,12 +1,12 @@
 import java.util.LinkedList;
 
-public class ServicePoint2 {
+public class ServicePoint {
     private final LinkedList<Customer> queue;
     private static long totalPreviousWaitingTime = 0;
     private static long totalPreviousServiceTime = 0;
     private static long totalPreviousResponseTime = 0;
 
-    public ServicePoint2() {
+    public ServicePoint() {
         queue = new LinkedList<>();
     }
 
@@ -19,9 +19,9 @@ public class ServicePoint2 {
     public long getTotalWaitingTime() {
         return totalPreviousWaitingTime;
     }
-    private static void setTotalPreviousWaitingTime(long totalPreviousWaitingTime) { ServicePoint2.totalPreviousWaitingTime += totalPreviousWaitingTime; }
-    private static void setTotalPreviousServiceTime(long totalPreviousServiceTime) { ServicePoint2.totalPreviousServiceTime += totalPreviousServiceTime; }
-    private static void setTotalPreviousResponseTime(long totalPreviousResponseTime) { ServicePoint2.totalPreviousResponseTime += totalPreviousResponseTime; }
+    private static void setTotalPreviousWaitingTime(long totalPreviousWaitingTime) { ServicePoint.totalPreviousWaitingTime += totalPreviousWaitingTime; }
+    private static void setTotalPreviousServiceTime(long totalPreviousServiceTime) { ServicePoint.totalPreviousServiceTime += totalPreviousServiceTime; }
+    private static void setTotalPreviousResponseTime(long totalPreviousResponseTime) { ServicePoint.totalPreviousResponseTime += totalPreviousResponseTime; }
 
     public void addToQueue(Customer customer) {
         queue.addFirst(customer); // add to front
@@ -29,7 +29,7 @@ public class ServicePoint2 {
 
     public Customer removeFromQueue() {
         if (!queue.isEmpty()) {
-            return queue.removeLast(); // remove from back
+            return queue.removeLast();
         }
         return null;
     }
