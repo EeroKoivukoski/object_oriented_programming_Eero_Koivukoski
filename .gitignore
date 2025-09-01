@@ -30,3 +30,4 @@ bin/
 /src/
 /object_oriented_programming.iml/
 /.idea/
+/.gitignore/
