@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task3/Task3.iml" filepath="$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task3/Task3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task4/Task4.iml" filepath="$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task4/Task4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task5/Task5.iml" filepath="$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task5/Task5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task6/Task6.iml" filepath="$PROJECT_DIR$/OrientationTasks/OrientationTasks1/Task6/Task6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.1/Tasks 1.1.iml" filepath="$PROJECT_DIR$/Tasks 1.1/Tasks 1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.2/Tasks 1.2.iml" filepath="$PROJECT_DIR$/Tasks 1.2/Tasks 1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.3/Tasks 1.3.iml" filepath="$PROJECT_DIR$/Tasks 1.3/Tasks 1.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 1.4/Tasks 1.4.iml" filepath="$PROJECT_DIR$/Tasks 1.4/Tasks 1.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 2.1/Tasks 2.1.iml" filepath="$PROJECT_DIR$/Tasks 2.1/Tasks 2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 2.2/Tasks 2.2.iml" filepath="$PROJECT_DIR$/Tasks 2.2/Tasks 2.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 2.3/Tasks 2.3.iml" filepath="$PROJECT_DIR$/Tasks 2.3/Tasks 2.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 3.1/Tasks 3.1.iml" filepath="$PROJECT_DIR$/Tasks 3.1/Tasks 3.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 3.2/Tasks 3.2.iml" filepath="$PROJECT_DIR$/Tasks 3.2/Tasks 3.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasks 3.3/Tasks 3.3.iml" filepath="$PROJECT_DIR$/Tasks 3.3/Tasks 3.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/object_oriented_programming.iml" filepath="$PROJECT_DIR$/object_oriented_programming.iml" />
+    </modules>
+  </component>
+</project>
