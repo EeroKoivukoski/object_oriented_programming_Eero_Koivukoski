@@ -4,7 +4,7 @@ import EventCode.Event;
 import EventCode.EventList;
 import EventCode.EventType;
 
-public class SimulationTest {
+public class TestMain{
     public static void main(String[] args) {
         EventList eventList = new EventList();
 
