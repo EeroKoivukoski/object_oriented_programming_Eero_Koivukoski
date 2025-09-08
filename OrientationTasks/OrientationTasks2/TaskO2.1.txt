@@ -1,4 +1,4 @@
 a) Saapumisen täytyy synnyttää uusi saapumistapahtuma, jotta asiakasvirta säilyy jatkuvana koko simulaation ajan. Jos
 Jokin muu vaihe synnyttäsi uuden saapumisen tulisi asiakasvirrasta liian hidas ja vaikea muokata halutun nopeksi.
 
-b) Että saamme palvelun myös päättymään, pitää synnyttää myös päättymistapahtuma joka toteutuu palvalun päätyttyä.
+b) Että saamme palvelun myös päättymään, pitää synnyttää myös päättymistapahtuma joka toteutuu palvelun päättymisajakohtana.
