@@ -163,21 +163,44 @@ Results:
 | Phase | Router Queue | Router | Oper 1 queue | Oper 1 | Oper 2 queue | Oper 2 |
 |-------|--------------|--------|--------------|--------|--------------|--------|
 | B     | X3           | Idle   | Empty        | X2     | Empty        | Y1     |
-| C     | Empty        | X3     | Empty        | X2     | Empty        | Y1     |
+| C     | Empty        | Idle   | Empty        | X3     | Empty        | Y1     |
 
 Event List:
 
 | Event | Time |
 |-------|------|
-| B4    | 16   |
-| B3    | 16   |
 | B5    | 18   |
 | B1    | 20   |
 | B2    | 20   |
+| B4    | 20   |
 
 Results:
 
 | Work<br>complete |   |
 |------------------|---|
-| X                | 1 |
+| X                | 2 |
 | Y                | 0 |
+
+**Call Centre Simulation: Clock 18 (Event B5)**
+
+| Phase | Router Queue | Router | Oper 1 queue | Oper 1 | Oper 2 queue | Oper 2 |
+|-------|--------------|--------|--------------|--------|--------------|--------|
+| B     | Empty        | Idle   | Empty        | X3     | Empty        | Y1     |
+| C     | Empty        | Idle   | Empty        | X3     | Empty        | Idle   |
+
+Event List:
+
+| Event | Time |
+|-------|------|
+| B1    | 20   |
+| B2    | 20   |
+| B4    | 20   |
+
+Results:
+
+| Work<br>complete |   |
+|------------------|---|
+| X                | 2 |
+| Y                | 1 |
+
+Vastaus: ajassa 18 on ensimmäinen y asiakas poistunut.
