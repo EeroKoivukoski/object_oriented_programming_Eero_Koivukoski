@@ -17,6 +17,7 @@ public class Event implements Comparable<Event> {
         return type;
     }
 
+
     @Override
     public int compareTo(Event other) {
         return Double.compare(this.time, other.time);

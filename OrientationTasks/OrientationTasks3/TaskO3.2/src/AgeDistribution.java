@@ -27,7 +27,7 @@ public class AgeDistribution {
 
         // Output the result of the generation:
         System.out.println("|####################|");
-        System.out.println("|Age |count  |%-share|");
+        System.out.println("|Age |Count  |%-share|");
         System.out.println("|####################|");
         for (int age = 0; age <= maxAge; age++) {
             if (generatedAges[age] != 0) {
