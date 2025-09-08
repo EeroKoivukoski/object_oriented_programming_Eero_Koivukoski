@@ -2,7 +2,7 @@ package EventCode;
 
 public class Event implements Comparable<Event> {
     private final double time;
-    private final String name;  // tapahtuman nimi, esim. "Arrival" tms.
+    private final String name;
 
     public Event(double time, String name) {
         this.time = time;

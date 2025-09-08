@@ -26,7 +26,6 @@ public class EventList {
         return ordered;
     }
 
-    // Tulostaa tapahtumat siististi
     public void printOrderedEvents() {
         for (Event e : getOrderedEvents()) {
             System.out.printf("- %s event at time %.2f%n", e.getType(), e.getTime());
