@@ -17,7 +17,7 @@ public class TestMain{
         eventList.printOrderedEvents();
 
         Event next = eventList.getNextEvent();
-        System.out.printf("%nProcessing next event: %s at time %.2f%n",
+        System.out.printf("\nProcessing next event: %s at time %.2f%n",
                           next.getType(), next.getTime());
 
         System.out.println("\nRemaining events in order:");

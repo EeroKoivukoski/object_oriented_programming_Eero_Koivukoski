@@ -1,16 +1,16 @@
 package ClockCode;
 
-public class MyClock {
-    private static MyClock instance;
+public class Clock {
+    private static Clock instance;
     private int time;
 
-    private MyClock() {
+    private Clock() {
         this.time=0;
     }
 
-    public static MyClock getInstance() {
+    public static Clock getInstance() {
         if (instance == null) {
-            instance = new MyClock();
+            instance = new Clock();
         }
         return instance;
     }
