@@ -1,0 +1,2 @@
+fast food restaurant
+(Queue) →(Ordering Counter) → (Payment) → (Pickup Station)

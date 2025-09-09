@@ -1,0 +1,25 @@
+clock = 0
+event list with first arrivals
+statistics
+
+while (simulation not finished):
+    nextEvent = eventList.getNext
+    clock = nextEvent.time
+
+    while (there are B-events at current clock):
+        process(nextEvent)
+        update statistics
+        schedule future events if needed
+
+    repeat
+        executed = false
+        for each conditional event:
+            if (conditions met):
+                process(event)
+                schedule corresponding B-event
+                update statistics
+                executed = true
+    until executed == false
+
+end while
+report statistics

@@ -1,0 +1,18 @@
+    Directly observable variables:
+    A = amount of passangers arriving to the bus stop
+    C = amount of passangers ending their ride
+    B = amount of time the bus spends carrying passangers
+    T = one day of operations
+
+    Derived variables:
+    U = B/T amount of time the bus is in use
+    X = C/T how many passangers were served
+    S = B/C average duration of rides
+
+    Additional directly observable variables:
+    R𝑖 = response time or time from arrival on stop to drop off
+    W =  total response time for all passangers
+
+    Further derived:
+    R = W/C avg passanger response time
+    N = W/T avg amount of passanges waiting or riding on the bus

@@ -1,0 +1,9 @@
+In the A-phase we advance the time. The Clock object is updated to the next scheduled event in the EventList.
+
+The B-phase is used to process all events that occur at the current time, such as customer arrivals or service
+completions. B-event updates the state of the system, for example by adding a new Customer to a queue
+or by marking a ServicePoint as free. B-events may also schedule new future events.
+
+The C-events coding is responsible for events that depend on the current state of the system rather than being scheduled
+in advance. When a customer arrives and a ServicePoint is idle, the customer immediately begins service. If the
+conditions are satisfied, the C-phase generates a B-event that marks the end of this service.

@@ -1,0 +1,15 @@
+Service point–level (resources):
+    Busy time (B)
+    Utilisation (U)
+    Throughput (X)
+    Avg service time (S)
+
+Customer–level:
+    Response time per individual (Rᵢ)
+    Waiting time (W)
+    Avg response time (R)
+
+System–level:
+    Arrivals and completions (A, C)
+    Average number of customers in the system (N)
+    Global throughput (X)

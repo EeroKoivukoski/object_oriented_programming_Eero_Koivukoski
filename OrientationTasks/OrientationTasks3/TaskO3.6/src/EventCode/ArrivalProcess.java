@@ -14,11 +14,9 @@ public class ArrivalProcess {
     }
 
     public void generateNext(EventList list) {
-        // luodaan uusi väli generatorin avulla
         double interval = generator.sample();
         currentTime += interval;
 
-        // uusi tapahtuma lisätään event listiin
         Event e = new Event(currentTime, type);
         list.addEvent(e);
     }
