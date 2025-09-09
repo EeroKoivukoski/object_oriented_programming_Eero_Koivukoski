@@ -1,0 +1,65 @@
+Task 1: Read a CSV file from the network location
+
+There is a network file (https://users.metropolia.fi/~jarkkov/temploki.csv) where we have periodical temperature measurements at 10 minutes interval. Create an application which reads the file, reads the 'UlkoTalo' column, and calculates the average temperature for the 1st day of January 2023.
+
+Task 2: Generate number sequence and store it to a CSV file for spreadsheet application
+
+Generate a Fibonacci sequence of 60 numbers and write them to a CSV file. Then read the content of the file with a spreadsheet application.
+
+    Note that the Fibonacci number of 60 is 1548008755920 that is too large to be stored in a 32-bit integer. Therefore, you need to use long data type instead of int. Please note also that the sequence starts with 0 and 1 and depending on your algorithm, it may take time to calculate the sequence.
+
+Task 3: Serialization of Course Enrollment
+
+Create a Java program that demonstrates the serialization and deserialization of a course enrollment system. You will create classes for students, courses, and enrollments, and then serialize and deserialize instances of these classes.
+
+    Create a Student class with the following attributes:
+        id (int)
+        name (String)
+        age (int)
+
+    Create a Course class with the following attributes:
+        courseCode (String)
+        courseName (String)
+        instructor (String)
+
+    Create an Enrollment class that represents the enrollment of a student in a course. It should have attributes:
+        student (Student)
+        course (Course)
+        enrollmentDate (String)
+
+    Implement constructors, getters, and setters for all classes.
+
+    Create a Main class with the main method to demonstrate serialization and deserialization. In the main method:
+        Create instances of Student, Course, and Enrollment.
+        Serialize and save the instances to a file named "enrollments.ser".
+        Deserialize the instances from the "enrollments.ser" file and print their information.
+
+Here's a simplified example of how the code might look:
+
+import java.io.*;
+
+class Student implements Serializable {
+    // Attributes and methods
+}
+
+class Course implements Serializable {
+    // Attributes and methods
+}
+
+class Enrollment implements Serializable {
+    // Attributes and methods
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of Student, Course, and Enrollment
+        // Serialize and save the Enrollment instance
+        // Deserialize and print the Enrollment instance
+    }
+}
+
+For this assignment, you get points in the following way:
+
+    Task 1 completed: 2 points
+    Task 2 completed: 2 points
+    Task 3 completed: 2 points
