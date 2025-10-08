@@ -9,7 +9,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Tasks 6.1" target="24" />
       <module name="untitled" target="24" />
     </bytecodeTargetLevel>
   </component>
